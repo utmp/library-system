@@ -102,7 +102,7 @@
                    <a href="index.php"><img src="../images/logo2.jpg" alt="Logo" style="border-radius: 50%;"></a> 
                 </div>
                 <div class="title">
-                <a href="index.php"><h3 style="">Online Library Management System</h3></a>
+                <a href="index.php"><h3>Online Library Management System</h3></a>
                 </div>
                 <nav>
                     <ul id="menuitems">
