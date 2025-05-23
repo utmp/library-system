@@ -45,15 +45,12 @@
                             <ul class="dropdown-content" id="myDropdown">
                                 <li><a href="profile.php">My Profile</a></li>
                                 <li><a href="student_update_password.php">Change Password</a></li>
-                                <!-- <li><a href="">Change Picture</a></li> -->
                                 <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> &nbsp; Logout</a></li>
                             </ul>
                         </li>
                         
                     </ul>
                 </div>
-               <!-- <a href="cart.html"><img src="images/cart.png" alt="Cart" width="50px" height="50px" style="margin-left: 10px;" class="cart-icon"></a> 
-                <img src="images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()"> -->
             </div>
         </div>
     </div>
@@ -85,15 +82,12 @@
                             ?>&nbsp;&nbsp;<i class="fas fa-caret-down"></i></button>
                             <ul class="dropdown-content" id="myDropdown">
                                 <li><a href="student_update_password.php">Change Password</a></li>
-                                <!-- <li><a href="">Change Picture</a></li> -->
                                 <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> &nbsp; Logout</a></li>
                             </ul>
                         </li>
                         
                     </ul>
                 </div>
-               <!-- <a href="cart.html"><img src="images/cart.png" alt="Cart" width="50px" height="50px" style="margin-left: 10px;" class="cart-icon"></a> 
-                <img src="images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()"> -->
             </div>
         </div>
     </div>
@@ -114,14 +108,10 @@
                     <ul id="menuitems">
                         <li><a href="index.php"><i class="fas fa-home"></i>  Home</a></li>
                         <li><a href="index_books.php"><i class="fas fa-book"></i> Books</a></li>
-                        <!-- <li><a href="">About Us</a></li>
-                        <li><a href="">Contact</a></li> -->
                         <li><a href="admin.php"><i class="fas fa-user-shield"></i> Admin</a></li>
                         <li><a href="student.php"><i class="fas fa-users"></i> Student</a></li>
                     </ul>
                 </nav>
-               <!-- <a href="cart.html"><img src="images/cart.png" alt="Cart" width="50px" height="50px" style="margin-left: 10px;" class="cart-icon"></a> 
-                <img src="images/menu.png" alt="Menu" class="menu-icon" onclick="menutoggle()"> -->
             </div>
         </div>
     </div>

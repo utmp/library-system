@@ -47,10 +47,6 @@
                         <label for="pic">Upload Picture :</label>
                     </div>
                     <input type="file"  name="file" class="file" value="">
-                    <!-- <div class="label">
-                        <label for="pic">Upload your profile picture : </label><br>
-                    </div>
-                    <input type="file" name="pic" class="file"> -->
                     <button type="submit" class="btn" name="register">Register</button>
                 </form>
             </div>

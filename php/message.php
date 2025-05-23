@@ -85,7 +85,6 @@
         </div>
         <div class="message-form">
             <form action="" method="post">
-                <!-- <input type="text" name="msg" class="msg-control" required placeholder="Write Message Here...."> -->
                 <textarea name="msg" id="" required placeholder="Write Message Here...."></textarea>
                 <button class="sendbtn" type="submit" name="submit"><i class="fas fa-paper-plane" ></i>&nbsp;Send</button>
             </form>

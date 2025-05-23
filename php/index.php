@@ -82,34 +82,6 @@
                     <?php
                 }
                 ?>
-                <!-- <div class="card">
-                    <img src="images/c.jpg" alt=""> 
-                    <div class="card-body">
-                        <h4>C</h4>
-                        <p>$50.00</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/cplus.jpg" alt="">
-                    <div class="card-body">
-                        <h4>C++</h4>
-                        <p>$50.00</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/java.jpg" alt="" class="java-img">
-                    <div class="card-body">
-                        <h4>Java</h4>
-                        <p>$50.00</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/python2.jpg" alt="">
-                    <div class="card-body">
-                        <h4>Python</h4>
-                        <p>$50.00</p>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
@@ -188,58 +160,6 @@
                 $count = $count+1;
             }
             ?>
-                
-                <!-- <div class="col-3">
-                    <i class="fas fa-quote-left"></i>
-                    <p>
-                        Lorem Ipsim is simply dummy text of the printing
-                        and typesetting industry. Lorem Ipsum has been the industry's standard
-                        dummy text ever.
-                     </p>
-                     <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <img src="images/user-1.png" alt="">
-                    <h3>Sean Parker</h3>
-                </div> -->
-                <!-- <div class="col-3">
-                    <i class="fas fa-quote-left"></i>
-                    <p>
-                        Lorem Ipsim is simply dummy text of the printing
-                        and typesetting industry. Lorem Ipsum has been the industry's standard
-                        dummy text ever.
-                     </p>
-                     <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <img src="images/user-2.png" alt="">
-                    <h3>Mike Smith</h3>
-                </div>
-                <div class="col-3">
-                    <i class="fas fa-quote-left"></i>
-                    <p>
-                        Lorem Ipsim is simply dummy text of the printing
-                        and typesetting industry. Lorem Ipsum has been the industry's standard
-                        dummy text ever.
-                     </p>
-                     <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <img src="images/user-3.png" alt="">
-                    <h3>Mabel Joe</h3>
-                </div> -->
             </div>
         </div>
     </div>
@@ -268,8 +188,6 @@
         </div>
     </div>
     <script>
-        /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
         function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
         }

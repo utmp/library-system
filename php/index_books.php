@@ -36,7 +36,6 @@
             </form>
         </div>
         <div class="small-container">
-            <!-- <h2 class="all-books-title">All Books</h2> -->
             <?php
             if(isset($_POST['submit']))
             {
@@ -65,7 +64,6 @@
                         while($row=mysqli_fetch_assoc($q)){
                             ?>
                             <div class="card">
-                                <!-- <img src="images/c.jpg" alt="">  -->
                                 <?php
                                     echo "<img src='../images/".$row['bookpic']."'>";
                                 ?>
@@ -136,7 +134,6 @@
                     while($row=mysqli_fetch_assoc($q)){
                         ?>
                         <div class="card">
-                            <!-- <img src="images/c.jpg" alt="">  -->
                             <?php
                                 echo "<img src='../images/".$row['bookpic']."'>";
                             ?>
@@ -201,7 +198,6 @@
                 while($row=mysqli_fetch_assoc($res)){
                     ?>
                     <div class="card">
-                        <!-- <img src="images/c.jpg" alt="">  -->
                         <?php
                             echo "<img src='../images/".$row['bookpic']."'>";
                         ?>

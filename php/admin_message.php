@@ -24,29 +24,17 @@
     ?>
     <div class="left-box">
         <div class="left-box2">
-        <!-- <form action="" method='post' style="margin-top:10px;">
-                <input type="search" name='search' placeholder='Search by Student Name' style="padding: 10px;margin-left:25px;margin-top:10px;border-radius:20px;outline:none;">
-                <button type='submit' name='usersearch' class='msg-search'><i class="fas fa-search"></i></button>
-            </form> -->
             <div class="list">
                 <?php
                     echo "<table id='table' class='table'>";
                     while($res1=mysqli_fetch_assoc($sql1)){
 
-                        echo "<tr>";
-                        // echo "<td>";
-                        // echo "<img height=60px width=60px style='border-radius: 50%' src='images/".$res1['studentpic']."'>";
-                        // echo "</td>";
-                        // echo "<td>";
-                        // echo $res1['FullName'];
-                        // echo "</td";
-                        
+                        echo "<tr>"; 
                         echo "<td>
                         <div class='table-info'>
                             <img height=60px width=60px style='border-radius: 50%' src='../images/".$res1['studentpic']."'>
                             <div>
                                 <p>";echo $res1['FullName'];echo"</p>";
-                                // echo"<small>";echo $res1['FullName']; echo " sent ";echo $res1['total']; echo" messages";echo"</small>";
                                 $sql2=mysqli_query($db,"SELECT COUNT(status) as total from message where '$res1[username]'=message.username and status='no' and sender='student';");
                                 $res2=mysqli_fetch_assoc($sql2);
                                 if(mysqli_num_rows($sql2)==0){
@@ -56,7 +44,7 @@
                                     echo"<small style='font-size:12px; padding-left:10px;padding-top:0;'>";echo $res2['total']; echo" unread messages";echo"</small>";
                                 }
                                 
-                                // echo"<small style='font-size:10px; padding-left:10px;padding-top:0;'>";echo $res1['message'];echo"</small>";?>
+                                ?>
                                 <a href="?req=<?php echo $res1['username'];?>"><button type='submit' name='show' style="margin-left:10px;">Show</button></a>
                             </div>
                         </div>
@@ -148,7 +136,6 @@
                 ?>
                 <div class="message-form">
                     <form action="" method="post">
-                        <!-- <input type="text" name="msg" class="msg-control" required placeholder="Write Message Here...."> -->
                         <textarea name="msg" id="" required placeholder="Write Message Here...."></textarea>
                         <button class="sendbtn" type="submit" name="submit"><i class="fas fa-paper-plane" ></i>&nbsp;Send</button>
                     </form>
@@ -230,7 +217,6 @@
                 ?>
                 <div class="message-form">
                     <form action="" method="post">
-                        <!-- <input type="text" name="msg" class="msg-control" required placeholder="Write Message Here...."> -->
                         <textarea name="msg" id="" required placeholder="Write Message Here...."></textarea>
                         <button class="sendbtn" type="submit" name="submit"><i class="fas fa-paper-plane" ></i>&nbsp;Send</button>
                     </form>
@@ -242,9 +228,6 @@
             ?>
         </div>
     </div>
-    
-       
-
 </body>
 </html>
 

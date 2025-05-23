@@ -47,16 +47,18 @@
 		}
 
 	?>
-    <!-- <div class="footer">
+   <div class="footer">
         <div class="footer-row">
             <div class="footer-left">
                 <h1>Opening Hours</h1>
                 <p><i class="far fa-clock"></i>Monday to Friday - 9am to 9pm</p>
                 <p><i class="far fa-clock"></i>Saturday to Sunday - 8am to 11pm</p>
             </div>
+            <div class="footer-middle">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d446.1963192461604!2d32.657594692552216!3d41.207841543378066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4083535a4c97b665%3A0xbeb2785ee29c578!2zS2FyYWLDvGsgw5xuaXZlcnNpdGVzaSBLYW1pbCBHw7xsZcOnIEvDvHTDvHBoYW5lc2k!5e0!3m2!1str!2str!4v1747988563845!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="footer-right">
                 <h1>Get In Touch</h1>
-                <p>#30 abc Colony, xyz City IN<i class="fas fa-map-marker-alt"></i></p>
+                <p>Bangla College Central Library, Dhaka<i class="fas fa-map-marker-alt"></i></p>
                 <p>example@website.com<i class="fas fa-paper-plane"></i></p>
                 <p>+8801515637957<i class="fas fa-phone-alt"></i></p>
             </div>
@@ -66,8 +68,8 @@
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram-square"></i>
             <i class="fab fa-youtube"></i>
-            <p>&copy; 2021 Copyright by Nazre Imam Tahmid</p>
+            <p>&copy; 2021 Copyright by Our Team</p>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>
