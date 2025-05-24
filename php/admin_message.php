@@ -67,7 +67,7 @@
                 if(isset($_POST['submit'])){
                     date_default_timezone_set("Asia/Dhaka");
                     $d = date("m/d/Y l, h:i A");
-                    mysqli_query($db,"INSERT into `lms2`.`message` VALUES('','$_SESSION[stdusername]','$_POST[msg]','no','admin','$d');");
+                    mysqli_query($db,"INSERT into `library`.`message` VALUES('','$_SESSION[stdusername]','$_POST[msg]','no','admin','$d');");
 
                     $res = mysqli_query($db,"SELECT * from message where username = '$_SESSION[stdusername]';");
                 }
@@ -148,7 +148,7 @@
                 if(isset($_POST['submit'])){
                     date_default_timezone_set("Asia/Dhaka");
                     $d = date("m/d/Y l, h:i A");
-                    mysqli_query($db,"INSERT into `lms2`.`message` VALUES('','$_SESSION[stdusername]','$_POST[msg]','no','admin','$d');");
+                    mysqli_query($db,"INSERT into `library`.`message` VALUES('','$_SESSION[stdusername]','$_POST[msg]','no','admin','$d');");
 
                     $res = mysqli_query($db,"SELECT * from message where username = '$_SESSION[stdusername]';");
                 }

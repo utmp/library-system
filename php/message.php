@@ -23,7 +23,7 @@
             date_default_timezone_set("Asia/Dhaka");
             $d = date("m/d/Y l, h:i A");
             // $d=date("y/m/d H:i:s");
-            mysqli_query($db,"INSERT into `lms2`.`message` VALUES('','$_SESSION[login_student_username]','$_POST[msg]','no','student','$d');");
+            mysqli_query($db,"INSERT into `library`.`message` VALUES('','$_SESSION[login_student_username]','$_POST[msg]','no','student','$d');");
 
             $res = mysqli_query($db,"SELECT * from message where username = '$_SESSION[login_student_username]';");
         }

@@ -1,6 +1,6 @@
 <?php
 
-	$db=mysqli_connect("localhost","root","",'lms2');
+	$db=mysqli_connect("localhost","root","",'library');
 	/* server name,username,password,database name*/
 
 	if(!$db)

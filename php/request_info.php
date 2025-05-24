@@ -77,7 +77,7 @@
                     echo "<td>"; echo $row['authorname']; echo "</td>";
                     echo "<td>"; echo $row['categoryname']; echo "</td>";
                     echo "<td>"; echo $row['ISBN']; echo "</td>";
-                    echo "<td>"; echo $row['price']; echo " Tk."; echo "</td>";
+                    echo "<td>"; echo $row['price']; echo " tl"; echo "</td>";
                     echo "<td>";?><a href="issue_book.php?ed=<?php echo $row['studentid'];?>&ed1=<?php echo $row['bookid'];?>"><button style="font-weight:bold;" type="submit" name="submit1" class="btn btn-default actionbtn">Issue
 			        </button>
                     </a>
@@ -133,7 +133,7 @@
                     echo "<td>"; echo $row['authorname']; echo "</td>";
                     echo "<td>"; echo $row['categoryname']; echo "</td>";
                     echo "<td>"; echo $row['ISBN']; echo "</td>";
-                    echo "<td>"; echo $row['price']; echo " Tk."; echo "</td>";
+                    echo "<td>"; echo $row['price']; echo " tl"; echo "</td>";
                     echo "<td>";?><a href="issue_book.php?ed=<?php echo $row['studentid'];?>&ed1=<?php echo $row['bookid'];?>"><button style="font-weight:bold;" type="submit" name="submit1" class="btn btn-default actionbtn">Issue
 			        </button>
                     </a>

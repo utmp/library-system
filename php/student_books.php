@@ -75,7 +75,7 @@
                                     <p style="font-size: 18px">Price: 
                                     <?php
                                         echo $row['price'];
-                                    ?> Tk.</p>
+                                    ?> tl</p>
                                 
                                 <div class="overlay"></div>
                                 <div class="sub-card">
@@ -102,7 +102,7 @@
                                 <p><b>Price:</b> 
                                 <?php
                                     echo $row['price'];
-                                ?> Tk.</p> 
+                                ?> tl</p> 
                                 <p><b>Status: &nbsp;</b>
                                 <span>
                                 <?php
@@ -148,7 +148,7 @@
                                 <p style="font-size: 18px">Price: 
                                 <?php
                                     echo $row['price'];
-                                ?> Tk.</p>
+                                ?> tl</p>
                             
                             <div class="overlay"></div>
                             <div class="sub-card">
@@ -175,7 +175,7 @@
                             <p><b>Price:</b> 
                             <?php
                                 echo $row['price'];
-                            ?> Tk.</p> 
+                            ?> tl</p> 
                             <p><b>Status: &nbsp;</b>
                             <span>
                             <?php
@@ -215,7 +215,7 @@
                                 <p style="font-size: 18px">Price: 
                                 <?php
                                     echo $row['price'];
-                                ?> Tk.</p>
+                                ?> tl</p>
                             
                             <div class="overlay"></div>
                             <div class="sub-card">
@@ -242,7 +242,7 @@
                             <p><b>Price:</b> 
                             <?php
                                 echo $row['price'];
-                            ?> Tk.</p> 
+                            ?> tl</p> 
                             <p><b>Status: &nbsp;</b>
                             <span>
                             <?php
