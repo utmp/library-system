@@ -77,15 +77,6 @@
 
 				echo "<tr>";
 				echo "<td>";
-					echo "<b> Password:  </b>";
-				echo "</td>";
-				echo "<td>";
-					echo $row['Password'];
-				echo "</td>";
-				echo "</tr>";
-
-				echo "<tr>";
-				echo "<td>";
 					echo "<b> Phone Number:  </b>";
 				echo "</td>";
 				echo "<td>";

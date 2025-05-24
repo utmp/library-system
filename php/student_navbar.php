@@ -32,10 +32,10 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                   <a href="index.php"><img src="../images/logo2.jpg" alt="Logo" style="border-radius: 50%;"></a> 
+                   <a href="student_dashboard.php"><img src="../images/logo2.jpg" alt="Logo" style="border-radius: 50%;"></a> 
                 </div>
                 <div class="title student-title">
-                <a href="index.php"><h3 style="font-size: 15px;">Online Library Management System</h3></a>
+                <a href="student_dashboard.php"><h3 style="font-size: 15px;">Online Library Management System</h3></a>
                 </div>
                 <div class="student-navbar">
                 

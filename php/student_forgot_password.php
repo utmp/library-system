@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Library Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
@@ -95,18 +95,16 @@
             </div>
             <div class="footer-right">
                 <h1>Get In Touch</h1>
-                <p>#30 abc Colony, xyz City IN<i class="fas fa-map-marker-alt"></i></p>
+                <p>Kılavuzlar Mahallesi 413. Sokak No: 10 Karabük Üniversitesi Merkez Kampüsü<i class="fas fa-map-marker-alt"></i></p>
                                 <a href="https://kutuphane.karabuk.edu.tr/index.aspx" style="color:black">website<i class="fas fa-paper-plane"></i></a>
 
                 <p>444 0 478<i class="fas fa-phone-alt"></i></p>
             </div>
         </div>
         <div class="social-links">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-youtube"></i>
-            <p>&copy; 2021 Copyright by Nazre Imam Tahmid</p>
+            <a href="https://www.instagram.com/kbukutuphane"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.youtube.com/@KBUKamilGulecKutuphanesi"><i class="fab fa-youtube"></i></a>
+            <p>&copy; 2025 Copyright by Karabuk</p>
         </div>
     </div>
     <script>

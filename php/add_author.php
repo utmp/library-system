@@ -64,11 +64,9 @@
             </div>
         </div>
         <div class="social-links">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-youtube"></i>
-            <p>&copy; 2021 Copyright by Our Team</p>
+            <a href="https://www.instagram.com/kbukutuphane"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.youtube.com/@KBUKamilGulecKutuphanesi"><i class="fab fa-youtube"></i></a>
+            <p>&copy; 2025 Copyright by Karabuk</p>
         </div>
     </div>
 </body>

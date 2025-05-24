@@ -54,37 +54,58 @@
     </div>
 
     <?php
-
-		if(isset($_POST['login']))
-		{
-			$res=mysqli_query($db,"SELECT * FROM `student` WHERE student_username='$_POST[student_username]' AND Email='$_POST[Email]' AND password='$_POST[Password]';");
-			$count=mysqli_num_rows($res);
-			$row=mysqli_fetch_assoc($res);
-			if($count==0)
-			{
-				?>
-				<script type="text/javascript">
-					alert("The username or password doesn't match.");
-
-				</script>
-				<?php
-			}
-			else
-			{
-				$_SESSION['login_student_username'] = $_POST['student_username'];
-				$_SESSION['studentid'] = $row['studentid'];
+if(isset($_POST['login']))
+{
+    $username = mysqli_real_escape_string($db, $_POST['student_username']);
+    $email = mysqli_real_escape_string($db, $_POST['Email']);
+    $password = $_POST['Password'];
+    
+    // First verify user exists and get their data
+    $sql = "SELECT studentid, student_username, password, studentpic FROM `student` 
+            WHERE student_username='$username' AND Email='$email' LIMIT 1";
+    $res = mysqli_query($db, $sql);
+    
+    if(mysqli_num_rows($res) > 0) {
+        $row = mysqli_fetch_assoc($res);
+        
+        // Debug the retrieved data - REMOVE IN PRODUCTION
+        error_log("SQL Query: " . $sql);
+        error_log("Retrieved row data: " . print_r($row, true));
+        
+        // Make sure we have a password hash before verifying
+        if(isset($row['password']) && !empty($row['password'])) {
+            if(password_verify($password, $row['password'])) {
+                $_SESSION['login_student_username'] = $username;
+                $_SESSION['studentid'] = $row['studentid'];
                 $_SESSION['pic'] = $row['studentpic'];
-
-				?>
-				<script type="text/javascript">
-					window.location="student_dashboard.php";
-				</script>
-
-				<?php
-
-			}
-		}
-	?>
+                ?>
+                <script type="text/javascript">
+                    window.location="student_dashboard.php";
+                </script>
+                <?php
+            } else {
+                ?>
+                <script>
+                    alert("Invalid password");
+                </script>
+                <?php
+            }
+        } else {
+            ?>
+            <script type="text/javascript">
+                alert("Account password not set properly");
+            </script>
+            <?php
+        }
+    } else {
+        ?>
+        <script type="text/javascript">
+            alert("Invalid username or email");
+        </script>
+        <?php
+    }
+}
+?>
     <?php
 
     if(isset($_POST['register']) && !empty($_FILES["file"]["name"]))
@@ -104,15 +125,13 @@
         }
         if($count==0)
         {
-            move_uploaded_file($_FILES['file']['tmp_name'],"../images/".$_FILES['file']['name']);
-            $pic = $_FILES['file']['name'];
-            mysqli_query($db,"INSERT INTO `STUDENT` VALUES('','$_POST[student_username]','$_POST[FullName]','$_POST[Email]','$_POST[Password]','$_POST[PhoneNumber]','$pic');");
-
-            ?>
-                <script type="text/javascript">
-                alert("Registration successful ");
-                </script>
-            <?php		
+             move_uploaded_file($_FILES['file']['tmp_name'],"../images/".$_FILES['file']['name']);
+        $pic = $_FILES['file']['name'];
+        $hashed_password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+        mysqli_query($db,"INSERT INTO `STUDENT` VALUES('','$_POST[student_username]','$_POST[FullName]','$_POST[Email]','$hashed_password','$_POST[PhoneNumber]','$pic');");
+        ?>
+        
+        <?php        
         }
         else
         {
@@ -139,13 +158,15 @@
         }
         if($count==0)
         {
-        mysqli_query($db,"INSERT INTO `STUDENT` VALUES('','$_POST[student_username]','$_POST[FullName]','$_POST[Email]','$_POST[Password]','$_POST[PhoneNumber]','user2.png');");
-
+            $hashed_password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+            mysqli_query($db,"INSERT INTO `STUDENT` VALUES('','$_POST[student_username]','$_POST[FullName]','$_POST[Email]','$hashed_password','$_POST[PhoneNumber]','user2.png');");
             ?>
-                <script type="text/javascript">
-                alert("Registration successful ");
-                </script>
-            <?php		
+            <script type="text/javascript">
+                alert("Registration successful");
+                // console.log("Original password: <?php echo $_POST['Password']; ?>");
+                // console.log("Hashed password: <?php echo $hashed_password; ?>");
+            </script>
+            <?php        
         }
         else
         {
@@ -169,18 +190,16 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d446.1963192461604!2d32.657594692552216!3d41.207841543378066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4083535a4c97b665%3A0xbeb2785ee29c578!2zS2FyYWLDvGsgw5xuaXZlcnNpdGVzaSBLYW1pbCBHw7xsZcOnIEvDvHTDvHBoYW5lc2k!5e0!3m2!1str!2str!4v1747988563845!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="footer-right">
                 <h1>Get In Touch</h1>
-                <p>#30 abc Colony, xyz City IN<i class="fas fa-map-marker-alt"></i></p>
-                                <a href="https://kutuphane.karabuk.edu.tr/index.aspx" style="color:black">website<i class="fas fa-paper-plane"></i></a>
+                <p>Kılavuzlar Mahallesi 413. Sokak No: 10 Karabük Üniversitesi Merkez Kampüsü<i class="fas fa-map-marker-alt"></i></p>
+                <a href="https://kutuphane.karabuk.edu.tr/index.aspx" style="color:black">website<i class="fas fa-paper-plane"></i></a>
 
                 <p>444 0 478<i class="fas fa-phone-alt"></i></p>
             </div>
         </div>
         <div class="social-links">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-youtube"></i>
-            <p>&copy; 2021 Copyright by Our Team</p>
+            <a href="https://www.instagram.com/kbukutuphane"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.youtube.com/@KBUKamilGulecKutuphanesi"><i class="fab fa-youtube"></i></a>
+            <p>&copy; 2025 Copyright by Karabuk</p>
         </div>
     </div>
 

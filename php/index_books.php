@@ -265,18 +265,16 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d446.1963192461604!2d32.657594692552216!3d41.207841543378066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4083535a4c97b665%3A0xbeb2785ee29c578!2zS2FyYWLDvGsgw5xuaXZlcnNpdGVzaSBLYW1pbCBHw7xsZcOnIEvDvHTDvHBoYW5lc2k!5e0!3m2!1str!2str!4v1747988563845!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="footer-right">
                 <h1>Get In Touch</h1>
-                <p>#30 abc Colony, xyz City IN<i class="fas fa-map-marker-alt"></i></p>
+                <p>Kılavuzlar Mahallesi 413. Sokak No: 10 Karabük Üniversitesi Merkez Kampüsü<i class="fas fa-map-marker-alt"></i></p>
                                 <a href="https://kutuphane.karabuk.edu.tr/index.aspx" style="color:black">website<i class="fas fa-paper-plane"></i></a>
 
                 <p>444 0 478<i class="fas fa-phone-alt"></i></p>
             </div>
         </div>
         <div class="social-links">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-youtube"></i>
-            <p>&copy; 2021 Copyright by Our Team</p>
+            <a href="https://www.instagram.com/kbukutuphane"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.youtube.com/@KBUKamilGulecKutuphanesi"><i class="fab fa-youtube"></i></a>
+            <p>&copy; 2025 Copyright by Karabuk</p>
         </div>
     </div>
 </body>
