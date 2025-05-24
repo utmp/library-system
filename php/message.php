@@ -20,7 +20,7 @@
 <body>
     <?php
         if(isset($_POST['submit'])){
-            date_default_timezone_set("Asia/Dhaka");
+            date_default_timezone_set("Europe/Istanbul");
             $d = date("m/d/Y l, h:i A");
             // $d=date("y/m/d H:i:s");
             mysqli_query($db,"INSERT into `library`.`message` VALUES('','$_SESSION[login_student_username]','$_POST[msg]','no','student','$d');");

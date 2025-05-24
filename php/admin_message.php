@@ -31,7 +31,7 @@
 
                         echo "<tr>"; 
                         echo "<td>
-                        <div class='table-info'>
+                        <div class='table-info' onclick='window.location.href=\"?req=".$res1['username']."\"' style='cursor: pointer;'>
                             <img height=60px width=60px style='border-radius: 50%' src='../images/".$res1['studentpic']."'>
                             <div>
                                 <p>";echo $res1['FullName'];echo"</p>";
@@ -45,7 +45,6 @@
                                 }
                                 
                                 ?>
-                                <a href="?req=<?php echo $res1['username'];?>"><button type='submit' name='show' style="margin-left:10px;">Show</button></a>
                             </div>
                         </div>
                         </td><?php
@@ -65,7 +64,7 @@
                 // echo $username;
                 if($username!=''){$_SESSION['stdusername']=$username;}
                 if(isset($_POST['submit'])){
-                    date_default_timezone_set("Asia/Dhaka");
+                    date_default_timezone_set("Europe/Istanbul");
                     $d = date("m/d/Y l, h:i A");
                     mysqli_query($db,"INSERT into `library`.`message` VALUES('','$_SESSION[stdusername]','$_POST[msg]','no','admin','$d');");
 
@@ -146,7 +145,7 @@
             }
             else{
                 if(isset($_POST['submit'])){
-                    date_default_timezone_set("Asia/Dhaka");
+                    date_default_timezone_set("Europe/Istanbul");
                     $d = date("m/d/Y l, h:i A");
                     mysqli_query($db,"INSERT into `library`.`message` VALUES('','$_SESSION[stdusername]','$_POST[msg]','no','admin','$d');");
 

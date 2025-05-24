@@ -40,7 +40,7 @@
 			else
 			{
 				echo "<table class='rtable'>";
-                echo "<tr style='background-color: teal;'>";
+                echo "<tr style='background-color: #5409DA;'>";
                 //Table header
                 echo "<th>"; echo "Students"; echo "</th>";
                 echo "<th>"; echo "Email"; echo "</th>";
@@ -71,7 +71,7 @@
 		{
 			$res=mysqli_query($db,"SELECT studentid,FullName,Email,PhoneNumber,studentpic FROM `student`;");
             echo "<table class='rtable'>";
-            echo "<tr style='background-color: teal;'>";
+            echo "<tr style='background-color: #5409DA;'>";
             //Table header
             echo "<th>"; echo "Students"; echo "</th>";
             echo "<th>"; echo "Email"; echo "</th>";

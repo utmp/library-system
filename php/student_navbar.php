@@ -48,7 +48,7 @@
                     ?>
                     <script>
                         // Set the date we're counting down to
-                        // date_default_timezone_set("Asia/Dhaka");
+                        date_default_timezone_set("Europe/Istanbul");
                         
                         var countDownDate = new Date("<?php echo $res['date']; ?>").getTime();
 
