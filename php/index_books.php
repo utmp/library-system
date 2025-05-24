@@ -24,237 +24,25 @@
     
     <div class="all-books">
         <div class="search-bar">
-            <form action="" method='post'>
-                <select name="category" class="select-category">
+            <form id="searchForm" onsubmit="return false;">
+                <select name="category" class="select-category" id="categorySelect">
                     <option value="selectcat">Select Category</option>
                     <?php while($row=mysqli_fetch_array($res)):;?>
                         <option value="<?php echo $row[0];?>"><?php echo $row[1];?></option>
                     <?php endwhile;?>
                 </select>
-                <input type="search" name='search' placeholder='Search by Book Name'>
-                <button type='submit' name='submit'><i class="fas fa-search"></i></button>
+                <input type="search" name='search' id="searchInput" placeholder='Search by Book Name'>
+                <button type="button"><i class="fas fa-search"></i></button>
             </form>
         </div>
         <div class="small-container">
-            <?php
-            if(isset($_POST['submit']))
-            {
-                if($_POST['category']!="selectcat")
-                {
-                
-                $cat = mysqli_query($db,"SELECT categoryname FROM category where categoryid = $_POST[category];");
-                $row=mysqli_fetch_assoc($cat);
-                ?>
-                <h2 class='all-books-title'>
-                <?php
-                echo $row['categoryname'];
-                ?></h2>
-                <?php     
-                $q=mysqli_query($db,"SELECT books.bookid,books.bookpic,books.bookname,category.categoryname,authors.authorname,books.ISBN,books.price,quantity,status from  `books` join `category` on category.categoryid=books.categoryid join `authors` on authors.authorid=books.authorid where bookname like '%$_POST[search]%' AND books.categoryid = $_POST[category];");
-                
-                if(mysqli_num_rows($q)==0)
-                {
-                    echo "Sorry! No Books found. Try searching again";
-
-                }
-                else{
-                    ?>
-                    <div class="row">
-                    <?php
-                        while($row=mysqli_fetch_assoc($q)){
-                            ?>
-                            <div class="card">
-                                <?php
-                                    echo "<img src='../images/".$row['bookpic']."'>";
-                                ?>
-                                <div class="card-body">
-                                <h4 style="font-size: 18px;">
-                                    <?php
-                                        echo $row['bookname'];
-                                    ?></h4>
-                                    <p style="font-size: 18px">Price: 
-                                    <?php
-                                        echo $row['price'];
-                                    ?> tl</p>
-                                
-                                <div class="overlay"></div>
-                                <div class="sub-card">
-                                <p><b>Book Name: &nbsp;</b> 
-                                <?php
-                                    echo $row['bookname'];
-                                ?></p>  
-                                <p><b>Category Name: &nbsp;</b> 
-                                <?php
-                                    echo $row['categoryname'];
-                                ?></p>
-                                <p><b>Author Name: &nbsp;</b> 
-                                <?php
-                                    echo $row['authorname'];
-                                ?></p>
-                                <p><b>ISBN: &nbsp;</b> 
-                                <?php
-                                    echo $row['ISBN'];
-                                ?></p>
-                                <p><b>Quantity: &nbsp;</b> 
-                                <?php
-                                    echo $row['quantity'];
-                                ?></p>
-                                <p><b>Price:</b> 
-                                <?php
-                                    echo $row['price'];
-                                ?> tl</p> 
-                                <p><b>Status: &nbsp;</b>
-                                <span>
-                                <?php
-                                    echo $row['status'];
-                                ?></span> </p>
-                                </div>
-                            </div>
-                            </div>
-                            <?php
-                        }
-                    ?>
-                    </div>
-                <?php 
-                }  
-                }
-                else{
-                    ?><h2 class="all-books-title">All Books</h2>
-                <?php
-                $q=mysqli_query($db,"SELECT books.bookid,books.bookpic,books.bookname,category.categoryname,authors.authorname,books.ISBN,books.price,quantity,status from  `books` join `category` on category.categoryid=books.categoryid join `authors` on authors.authorid=books.authorid where bookname like '%$_POST[search]%'; ");
-                if(mysqli_num_rows($q)==0)
-                {
-                    echo "Sorry! No Books found. Try searching again";
-
-                }
-                else{
-                    ?>
-                    <div class="row">
-                    <?php
-                    while($row=mysqli_fetch_assoc($q)){
-                        ?>
-                        <div class="card">
-                            <?php
-                                echo "<img src='../images/".$row['bookpic']."'>";
-                            ?>
-                            <div class="card-body">
-                            <h4 style="font-size: 18px;">
-                                <?php
-                                    echo $row['bookname'];
-                                ?></h4>
-                                <p style="font-size: 18px">Price: 
-                                <?php
-                                    echo $row['price'];
-                                ?> tl</p>
-                            
-                            <div class="overlay"></div>
-                            <div class="sub-card">
-                            <p><b>Book Name: &nbsp;</b> 
-                            <?php
-                                echo $row['bookname'];
-                            ?></p>  
-                            <p><b>Category Name: &nbsp;</b> 
-                            <?php
-                                echo $row['categoryname'];
-                            ?></p>
-                            <p><b>Author Name: &nbsp;</b> 
-                            <?php
-                                echo $row['authorname'];
-                            ?></p>
-                            <p><b>ISBN: &nbsp;</b> 
-                            <?php
-                                echo $row['ISBN'];
-                            ?></p>
-                            <p><b>Quantity: &nbsp;</b> 
-                            <?php
-                                echo $row['quantity'];
-                            ?></p>
-                            <p><b>Price:</b> 
-                            <?php
-                                echo $row['price'];
-                            ?> tl</p> 
-                            <p><b>Status: &nbsp;</b>
-                            <span>
-                            <?php
-                                echo $row['status'];
-                            ?></span> </p>
-                            </div>
-                        </div>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                    </div>
-                <?php 
-                } 
-                }
-                  
-            }
-            else{
-                ?><h2 class="all-books-title">All Books</h2>
-                <div class="row">
-                <?php
-                $res=mysqli_query($db,"SELECT books.bookid,books.bookpic,books.bookname,category.categoryname,authors.authorname,books.ISBN,books.price,quantity,status from  `books` join `category` on category.categoryid=books.categoryid join `authors` on authors.authorid=books.authorid;");
-                while($row=mysqli_fetch_assoc($res)){
-                    ?>
-                    <div class="card">
-                        <?php
-                            echo "<img src='../images/".$row['bookpic']."'>";
-                        ?>
-                        <div class="card-body">
-                            <h4 style="font-size: 18px;">
-                                <?php
-                                    echo $row['bookname'];
-                                ?></h4>
-                                <p style="font-size: 18px">Price: 
-                                <?php
-                                    echo $row['price'];
-                                ?> tl</p>
-                            
-                            <div class="overlay"></div>
-                            <div class="sub-card">
-                            <p><b>Book Name: &nbsp;</b> 
-                            <?php
-                                echo $row['bookname'];
-                            ?></p>  
-                            <p><b>Category Name: &nbsp;</b> 
-                            <?php
-                                echo $row['categoryname'];
-                            ?></p>
-                            <p><b>Author Name: &nbsp;</b> 
-                            <?php
-                                echo $row['authorname'];
-                            ?></p>
-                            <p><b>ISBN: &nbsp;</b> 
-                            <?php
-                                echo $row['ISBN'];
-                            ?></p>
-                            <p><b>Quantity: &nbsp;</b> 
-                            <?php
-                                echo $row['quantity'];
-                            ?></p>
-                            <p><b>Price:</b> 
-                            <?php
-                                echo $row['price'];
-                            ?> tl</p> 
-                            <p><b>Status: &nbsp;</b>
-                            <span>
-                            <?php
-                                echo $row['status'];
-                            ?></span> </p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                }
-                ?>
-                </div>
-            <?php 
-            }
-            ?>
+            <h2 class="all-books-title">All Books</h2>
+            <div class="row" id="booksContainer">
+                <!-- Books will be loaded here -->
+            </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <div class="footer-row">
             <div class="footer-left">
@@ -277,5 +65,7 @@
             <p>&copy; 2025 Copyright by Karabuk</p>
         </div>
     </div>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../js/books.js"></script>
 </body>
 </html>
