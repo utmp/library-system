@@ -60,7 +60,6 @@ if(isset($_POST['login']))
     $email = mysqli_real_escape_string($db, $_POST['Email']);
     $password = $_POST['Password'];
     
-    // First verify user exists and get their data
     $sql = "SELECT studentid, student_username, password, studentpic FROM `student` 
             WHERE student_username='$username' AND Email='$email' LIMIT 1";
     $res = mysqli_query($db, $sql);
@@ -68,11 +67,6 @@ if(isset($_POST['login']))
     if(mysqli_num_rows($res) > 0) {
         $row = mysqli_fetch_assoc($res);
         
-        // Debug the retrieved data - REMOVE IN PRODUCTION
-        error_log("SQL Query: " . $sql);
-        error_log("Retrieved row data: " . print_r($row, true));
-        
-        // Make sure we have a password hash before verifying
         if(isset($row['password']) && !empty($row['password'])) {
             if(password_verify($password, $row['password'])) {
                 $_SESSION['login_student_username'] = $username;
@@ -163,8 +157,6 @@ if(isset($_POST['login']))
             ?>
             <script type="text/javascript">
                 alert("Registration successful");
-                // console.log("Original password: <?php echo $_POST['Password']; ?>");
-                // console.log("Hashed password: <?php echo $hashed_password; ?>");
             </script>
             <?php        
         }

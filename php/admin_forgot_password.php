@@ -102,7 +102,7 @@
         <div class="social-links">
             <a href="https://www.instagram.com/kbukutuphane"><i class="fab fa-instagram-square"></i></a>
             <a href="https://www.youtube.com/@KBUKamilGulecKutuphanesi"><i class="fab fa-youtube"></i></a>
-            <p>&copy; 2021 Copyright by Nazre Imam Tahmid</p>
+            <p>&copy; 2025 Copyright by Karabuk</p>
         </div>
     </div>
     <script>
