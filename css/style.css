@@ -51,7 +51,6 @@ body{
     flex-basis: 20%;
 }
 .title h3{
-    /* margin-left: 20px; */
     color: #fff;
     font-size: 20px;
 }
@@ -64,14 +63,12 @@ nav{
     text-align: right;
 }
 nav ul{
-    /* display: inline-block; */
     list-style-type: none;
     
 }
 nav ul li{
     display: inline-block;
     position: relative;
-    /* margin-right: 20px; */
 }
 a{
     text-decoration: none;
@@ -116,7 +113,6 @@ nav ul li a:hover{
 }
 .active{
     background-color: #4E71FF;
-    /* border-radius: 5px; */
     color: white;
 }
 .student-navbar ul li a:hover{
@@ -176,7 +172,6 @@ nav ul li a:hover{
     position: absolute;
     background: #5409DA;
     top: 46px;
-    /* left: -40px; */
     right: 0;
    
 }
@@ -325,15 +320,11 @@ nav ul li a:hover{
     border-radius: 50%;
     transition: 0.4s;
     position: absolute;
-    /* padding-bottom: none;  */
     text-align: left;
     left: -15px;
     top: -5px;
 }
-/* .student-navbar ul ul li{
-    width: 150px;
-    display: list-item;
-} */
+
 .banner{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/banner.jpg');
     background-position: center;
@@ -360,7 +351,6 @@ nav ul li a:hover{
     text-align: center;
     margin: 0 auto 50px;
     line-height: 60px;
-    /* color: #555; */
     font-size: 30px;
     font-weight: bold;
     position: relative;
@@ -406,7 +396,6 @@ nav ul li a:hover{
     margin-top: 100px;
     border-radius: 50%;
     position: relative;
-    /* margin-bottom: 20px; */
 }
 .select-img img{
     position: relative;
@@ -453,11 +442,9 @@ nav ul li a:hover{
 }
 .profile-table{
     font-size: 15px;
-    /* border: 2px solid teal; */
     border-collapse: collapse; 
 }
 .profile-table tr,td{
-    /* border: 2px solid teal; */
     border: none;
     padding: 10px;
 }
@@ -483,21 +470,16 @@ nav ul li a:hover{
     padding-right: 25px;
 }
 .card{
-    /* width: 250px; */
     height: 400px;
     flex-basis: 25%;
     padding: 10px;
-    /* min-width: 200px; */
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.4s;
     position: relative;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
-    /* border-radius: 10px; */
 }
 .card img{
     width: 250px;
-    /* width: 100%; */
     height: 300px;
 }
 .card-body h4{
@@ -507,7 +489,6 @@ nav ul li a:hover{
     font-size: 20px;
 }
 .card:hover{
-    /* transform: scale(1.1); */
     transform: translateY(-5%);
 }
 .overlay{
@@ -515,12 +496,9 @@ nav ul li a:hover{
     top: 2%;
     left: 10%;
     background: white;
-    /* border-top: 3px solid teal; */
     width: 250px;
     height: 300px;
     transition: 1s;
-    /* box-shadow: 0 0 20px 0px rgba(0,0,0,0.1); */
-    /* background: linear-gradient(rgba(0,0,0,0.5),#009688); */
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
     opacity: 0;
 }
@@ -529,14 +507,10 @@ nav ul li a:hover{
 }
 .sub-card{
     position: absolute;
-    /* top: 30%;
-    left: 30%; */
-    /* top: 3%; */
     bottom: -20%;
     left: 53%;
     width: 250px;
     height: 300px;
-    /* background-color: thistle; */
     transition: 1s;
     transform: translateX(-50%);
     opacity: 0;
@@ -551,7 +525,6 @@ nav ul li a:hover{
 .all-books .card:hover .sub-card{
     opacity: 1;
     bottom: 10%;
-    /* position: relative; */
 } 
 .sub-card button{
     margin: 0 auto;
@@ -677,8 +650,6 @@ nav ul li a:hover{
     color: teal;
 }
 .dashboard{
-    /* background: radial-gradient(#fff,powderblue); */
-    /* background: powderblue; */
     padding-bottom: 500px;
 }
 .dashboard-container{
@@ -689,16 +660,10 @@ nav ul li a:hover{
     
 }
 .admin-dashboard{
-    /* background: radial-gradient(#fff,powderblue); */
-    /* background: powderblue; */
     padding-bottom: 300px;
 }
 .admin-dashboard-container{
     max-width: 1300px;
-    /* margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;  */
-    
 }
 .dashboard-row{
     display: flex;
@@ -709,15 +674,12 @@ nav ul li a:hover{
 }
 .admin-dashboard-row{
     display: flex;
-    /* align-items: center; */
     flex-wrap: wrap;
-    /* justify-content: space-between; */
     padding-top: 150px;
     padding-left: 200px;
 }
 .dashboard-col-3{
     flex-basis: 30%;
-    /* width: 100px; */
     height: 150px;
     text-align: center;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
@@ -731,7 +693,6 @@ nav ul li a:hover{
 }
 .dashboard-col-4{
     flex-basis: 23%;
-    /* width: 100px; */
     height: 150px;
     text-align: center;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
@@ -739,10 +700,6 @@ nav ul li a:hover{
     border-radius: 20px;
     padding-top: 50px;
     transition: 0.4s;
-    /* margin: 10px; */
-    /* margin-right: 10px; */
-    /* margin-top: 10px;
-    margin-left: 20px; */
     margin-top: 20px;
     margin-left: 22px;
 }
@@ -753,7 +710,6 @@ nav ul li a:hover{
     transform: scale(1.1);
 }
 .dashboard-col-4 a:hover{
-    /* transform: scale(1.1); */
     color: rgb(4, 4, 31);
 }
 .dashboard-col-3 h3 {
@@ -763,7 +719,6 @@ nav ul li a:hover{
     transform: scale(1.1);
 }
 .dashboard-col-3 a:hover{
-    /* transform: scale(1.1); */
     color: rgb(4, 4, 31);
 }
 .request-table{
@@ -832,7 +787,6 @@ nav ul li a:hover{
     background-color: red;
     color: #fff;
     padding: 8px 30px;
-    /* margin: 30px 0; */
     border-radius: 30px;
     transition: background-color 0.4s;
     outline: none;
@@ -846,7 +800,6 @@ nav ul li a:hover{
 }
 .delbtn:hover{
     background-color: #555;
-    /* opacity: 0.5; */
     color: white;
 }
 .table-info button:hover{
@@ -866,7 +819,6 @@ nav ul li a:hover{
 .footer{
     padding: 50px 0 20px;
     background-color: #efefef;
-    /* background-color: teal; */
     position: relative;
 }
 
@@ -890,7 +842,6 @@ nav ul li a:hover{
 .footer-left,.footer-right{
     flex-basis: 30%;
     padding: 10px;
-    /* margin-bottom: 20px; */
 }
 .footer-right{
     text-align: right;
@@ -916,7 +867,6 @@ nav ul li a:hover{
     font-size: 20px;
     line-height: 40px;
     border: 1px solid #009688;
-    /* margin: 40px 5px 0; */
     margin-right: 5px;
     color: #009688;
     cursor: pointer;
@@ -943,7 +893,6 @@ nav ul li a:hover{
     width: 400px;
     height: 500px;
     position: relative;
-    /* text-align: center; */
     padding: 20px 0;
     margin: auto;
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
@@ -998,20 +947,12 @@ form .btn{
     margin-bottom: 10px;
 }
 .edit-profile-container{
-    /* position: relative; */
     background: radial-gradient(#fff,powderblue);
-    /* max-width: 1300px; */
     width: 100%;
     padding-top: 50px;
     padding-bottom: 700px;
-    /* padding-left: 200px; */
-    /* padding-right: 150px; */
 }
-/* .edit-profile-container .form{
-    position: absolute;
-    top: 50%;
-    left: 35%;
-} */
+
 .edit-profile-container .form label{
     text-align: left;
     font-weight: bold;
@@ -1023,7 +964,6 @@ form .btn{
 
 .edit-profile-container .edit-form-container{
     height: 550px;
-    /* margin-top: 10px; */
 }
 .edit-profile-container .add-book-form{
     height: 580px;
@@ -1071,9 +1011,7 @@ form .btn:focus{
 #loginform{
     left: 0;
 }
-/* #loginform .btn{
-    margin-left: 23px;
-} */
+
 #regform{
     left: 400px;
 
@@ -1096,14 +1034,12 @@ form input:focus{
     background-color: teal;
     color: #fff;
     padding: 8px 30px;
-    /* margin: 30px 0; */
     border-radius: 30px;
     transition: background-color 0.4s;
     outline: none;
 }
 .btn:hover{
     background-color: #555;
-    /* opacity: 0.5; */
     color: white;
 }
 .signup p{
@@ -1118,13 +1054,6 @@ form input:focus{
 .signup span:hover{
     font-weight: bold;
 }
-/* .show-hide{
-    position: absolute;
-    right: 0;
-    top: 47%;
-    transform: translate(0,-50%);
-    
-} */
 
 .show-hide i{
     cursor: pointer;
@@ -1133,7 +1062,6 @@ form input:focus{
     top: 46%;
     transform: translate(0,-50%);
     display: none;
-    /* font-size: 15px; */
 }
 .show-hide i.hide:before{
     content: '\f070';
@@ -1291,8 +1219,6 @@ form input:focus{
   content: "I just love it 😍";
 }
 .star-widget header{
-    /* padding-left: 10px; */
-    /* text-align: center; */
     padding-top: 20px;
     width: 100%;
     font-weight: 500;
@@ -1330,7 +1256,6 @@ form input:focus{
     height: 600px;
     width: 800px;
     background: #fff;
-    /* text-align: center; */
     padding: 10px;
     margin: 20px auto;
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
@@ -1354,7 +1279,6 @@ form input:focus{
     border-radius: 20px;
     resize: none;
     padding: 10px;
-    /* margin-top: 10px; */
     float: left;
     outline: none;
     
@@ -1397,8 +1321,6 @@ form input:focus{
     float: right;
     color: black;
     font-weight: bold;
-    /* padding: 10px; */
-    /* padding-left: 5px; */
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 20px;
@@ -1424,7 +1346,6 @@ form input:focus{
 .list .table .table-info{
     width: 350px;
     border-radius: 20px;
-    /* padding: 10px; */
     padding: 8px 10px;
 }
 .list .table .table-info{
